@@ -1,8 +1,15 @@
+
+
+body {
+    background-color: rgb(185, 202, 228);
+
+}
 #container {
     display: flex;
     flex-direction: column;
+
     margin: auto;
-    background-color: rgb(185, 202, 228);
+    
     width: 100%;
     height: 100%;
 }
@@ -11,16 +18,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
+}
+
+#description {
+    width: 60%;
+    text-align: center;
+    margin-top: 20px;
 }
 
 #restMenuTitle {
     color: rgb(69, 81, 104);
 
+
 }
 
 #carouselExampleFade {
-    margin: 40px 0 40px;
+    margin: 25px 0 30px;
+    
 }
+
+#carouselExampleFade img {
+    height: 400px;
+    
+}
+
 
 #courses {
     display:flex;
@@ -28,19 +50,98 @@
     justify-content: center;
 
 }
+ 
+.foodImg {
+    width: 500px;
+}
 
 .menuBar {
-    margin:auto ;
+    display: flex;
+    justify-content: center;
+}
+
+.menuBar button {
+    margin: 30px 50px 50px;
+    transform: scale(2);
+    border: none;
+    background-color: rgb(185, 202, 228);
 }
 
 #menuItems {
-    display: flex;
-    flex-direction: column;
+    width: 60%;
+    margin: auto;
     list-style: none;
+    
 }
 
+#menuItems li {
+    margin: 40px auto 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+
+#menuItems li div {
+    margin-top: 20px;
+
+}
+
+h2{
+    text-align: center;
+}
 
 .d-block {
     height: 600px;
     object-fit: cover;
 } 
+
+@media (min-width: 320px) and (max-width: 480px) {
+    #description {
+        width:90%
+    }
+    #container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #carouselExampleFade img {
+        height: 250px;
+        width: 100%;
+    }
+
+    .menuBar button {
+        margin: 10px 30px 30px;
+        transform: scale(1.5);
+        border: none;
+        background-color: rgb(185, 202, 228);
+    }
+
+    .foodImg {
+        width: 300px;
+    }
+
+    h1{
+        text-align: center;
+    }
+    h2 {
+        font-size: large;
+    }
+
+    h3 {
+        font-size: large;
+    }
+
+    #menuItems {
+        width: 80%;
+        margin: auto;
+        list-style: none;
+        
+    }
+    .d-block {
+        height: 250px;
+        object-fit: cover;
+    } 
+}

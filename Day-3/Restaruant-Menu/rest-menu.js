@@ -18,6 +18,8 @@ const dessertMenuBtn = document.getElementById("course3")
     dishesUl.insertAdjacentHTML("beforeend", dishItem)
 }*/
 
+
+
 let starters = dishes.filter(function(dish) {
     return dish.course == "Starters"
     
@@ -27,14 +29,19 @@ starterMenuBtn.addEventListener("click",function() {
     dishesUl.innerHTML= ""
     starters.map(function(starter) {
         const starterContent = `
-    <li> 
-        <div><img src="${starter.imageURL}"/></div>
-        <h1>${starter.title}</h1>
-        <h2>${starter.description}</h2>
-        <h3>$${starter.price}.00</h3>
+    <li class = "dishes"> 
+        <div><img class="foodImg" src="${starter.imageURL}"/></div>
+        <div> <h1>${starter.title}</h1> </div>
+        <div> <h2>${starter.description}</h2> </div>
+        <div> <h3>$${starter.price}.00</h3> </div>
+        
+        
+        
         
     </li>
         `
+
+    
     dishesUl.insertAdjacentHTML("beforeend", starterContent)
         
     })
@@ -55,11 +62,14 @@ entreeMenuBtn.addEventListener("click",function() {
     dishesUl.innerHTML= ""
     entrees.map(function(entree) {
         const entreeContent = `
-    <li> 
-        <div><img src="${entree.imageURL}"/></div>
-        <h1>${entree.title}</h1>
-        <h2>${entree.description}</h2>
-        <h3>$${entree.price}.00</h3>
+    <li class = "dishes"> 
+        <div><img class="foodImg" src="${entree.imageURL}"/></div>
+        <div> <h1>${entree.title}</h1> </div>
+        <div>  <h2>${entree.description}</h2></div>
+        <div> <h3>$${entree.price}.00</h3> </div>
+        
+        
+        
         
     </li>
         `
@@ -77,11 +87,14 @@ dessertMenuBtn.addEventListener("click",function() {
     dishesUl.innerHTML= ""
     desserts.map(function(dessert) {
         const dessertContent = `
-    <li> 
-        <div><img src="${dessert.imageURL}"/></div>
-        <h1>${dessert.title}</h1>
-        <h2>${dessert.description}</h2>
-        <h3>$${dessert.price}.00</h3>
+    <li class = "dishes"> 
+        <div><img class="foodImg" src="${dessert.imageURL}"/></div>
+        <div><h1>${dessert.title}</h1> </div>
+        <div> <h2>${dessert.description}</h2></div>
+        <div> <h3>$${dessert.price}.00</h3></div>
+        
+        
+        
         
     </li>
         `
